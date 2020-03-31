@@ -39,7 +39,7 @@
     document.getElementById("convertBtn").addEventListener("click", function () {
       var url = document.getElementById("downloadUrlInput").value;
       var name = document.getElementById("fileNameInput").value;
-      var win = window.open(encodeURI("/download.html?n=" + name + "&d=" + url, '_blank'));
+      var win = window.open(encodeURI("download.html?n=" + name + "&d=" + url, '_blank'));
       win.focus();
     });
 
