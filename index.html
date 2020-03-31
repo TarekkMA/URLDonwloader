@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="notification">
+      <h1 class="title">
+        URL Downloader
+      </h1>
+      <h2 class="subtitle">
+        A free open source website
+      </h2>
+      <br>
+      <div class="field">
+        <div class="control">
+          <input id="fileNameInput" class="input is-large" type="text" placeholder="File Name">
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <input id="downloadUrlInput" class="input is-large" type="text" placeholder="Download URL">
+        </div>
+      </div>
+      <button id="convertBtn" class="button is-success">Convert</button>
+    </div>
+  </div>
+
+  <script>
+
+    document.getElementById("convertBtn").addEventListener("click", function () {
+      var url = document.getElementById("downloadUrlInput").value;
+      var name = document.getElementById("fileNameInput").value;
+      var win = window.open(encodeURI("/download.html?n=" + name + "&d=" + url, '_blank'));
+      win.focus();
+    });
+
+  </script>
+</body>
+
+</html>
